@@ -44,5 +44,7 @@ group :development, :test do
 
 gem 'carrierwave' #0.10.0
 
+gem 'devise'
+
 end
 

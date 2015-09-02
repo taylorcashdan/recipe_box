@@ -3,7 +3,7 @@ class Recipe < ActiveRecord::Base
 	validates :name, presence: true, length: {minimum: 2}
 	validates :category, presence: true, length: {minimum: 3}
 	validates :ingredients, presence: true, length: {minimum: 10}
-	validates :steps, presence: true, length: {minimum: 50}
+	validates :steps, presence: true, length: {minimum: 10}
 	validates :cook_time, presence: true, numericality: {greater_than: 0, less_than: 450}
 
 
@@ -16,6 +16,8 @@ class Recipe < ActiveRecord::Base
 			cook_time
 		end
 	end
+
+	belongs_to :user
 
 end
 

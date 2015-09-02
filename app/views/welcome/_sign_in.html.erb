@@ -1,0 +1,31 @@
+<h3>Welcome Back! Sign In:</h3><br />
+
+        <!-- The form to sign-in; for right now, we'll
+
+        have them sign-in using their name, but we may
+
+        change it later so that they sign in using their
+
+        handle instead (or maybe have it so they can do either).
+
+        -->
+
+        <%= form_for(:user, :url => session_path(:user)) do |f| %>
+
+        <p><strong>Email:</strong> <%= f.text_field :email %></p>
+
+        <p><strong>Password:</strong> <%= f.password_field :password %></p>
+
+        <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
+
+        <p><%= f.submit 'Sign In' %></p>
+
+        <p><%= link_to "Forgot your password?", new_password_path(:user) %></p>
+
+        <% end %>
+
+        </div>
+
+
+
+        
